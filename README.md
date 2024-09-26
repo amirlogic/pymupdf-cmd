@@ -1,5 +1,8 @@
 # PyMuPDF-cmd
-PyMuPDF command-line apps
+
+PyMuPDF command-line scripts
+
+PyMuPDF must be installed
 
 ```pixmap.py```        Saves page as png image
 
