@@ -10,3 +10,5 @@ PyMuPDF command-line apps
 ```data.py```          Gets infos from a pdf file: Metadata, page count, images, tables and links 
 
 ```delete.py```        Delete page from pdf file 
+
+```merge.py```         Merge two pdf files 
