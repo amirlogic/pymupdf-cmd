@@ -1,6 +1,6 @@
 import pymupdf
 
-filename = input("Filename:")
+filename = input("Filename: ")
 
 doc = pymupdf.open(filename) # some new or existing PDF document
 
@@ -12,11 +12,13 @@ print("Analyzing pages...")
 
 imgCount = 0
 
-for page in doc:
+for index,page in enumerate(doc):
     tbls = page.find_tables()
     imgs = page.get_images()
+    lnks = page.get_links()
 
-    print("Tables found: ",len(tbls.tables))
+    print("pg#",index,": ")
+    
     if(len(tbls.tables)>0):
         print("This page contains tables")
         for t in tbls.tables:
@@ -26,7 +28,15 @@ for page in doc:
         print("This page contains images")
         imgCount += len(imgs)
 
-print("Total images count: ",imgCount)
+    if(len(lnks)>0):
+        print("This page contains links")
+        print(lnks)
+
+#print("Total images count: ",imgCount)
+
+doc.close()
+
+print("Done")
 
 """ page = doc.insert_page(-1, # insertion point: end of document
                         text = "The quick brown fox jumped over the lazy dog",

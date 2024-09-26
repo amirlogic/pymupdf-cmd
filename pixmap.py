@@ -32,8 +32,4 @@ print("pixmap saved")
 
     #print("Fonts:",page.get_fonts()) """
 
-
-
-
-
 doc.close()
