@@ -15,3 +15,5 @@ PyMuPDF must be installed
 ```delete.py```        Delete page from pdf file 
 
 ```merge.py```         Merge two pdf files 
+
+```move.py```          Move pages inside pdf document
