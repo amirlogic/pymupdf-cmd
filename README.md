@@ -17,3 +17,7 @@ PyMuPDF must be installed
 ```merge.py```         Merge two pdf files 
 
 ```move.py```          Move pages inside pdf document
+
+```fcopy.py```         Duplicate a page
+
+```split.py```         Split a pdf document
