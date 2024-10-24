@@ -168,6 +168,7 @@ cython_debug/
 *.txt
 *.jpeg
 *.html
+*.svg
 
 # Dev
 dev.py
