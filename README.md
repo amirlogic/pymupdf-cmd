@@ -21,3 +21,7 @@ PyMuPDF must be installed
 ```fcopy.py```         Duplicate a page
 
 ```split.py```         Split a pdf document
+
+```get-svg.py```       Export page to SVG
+
+```html.py```          Export page to HTML
