@@ -25,3 +25,5 @@ PyMuPDF must be installed
 ```get-svg.py```       Export page to SVG
 
 ```html.py```          Export page to HTML
+
+```search.py```        Find a word in a document
