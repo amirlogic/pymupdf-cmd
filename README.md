@@ -27,3 +27,6 @@ PyMuPDF must be installed
 ```html.py```          Export page to HTML
 
 ```search.py```        Find a word in a document
+
+```table.py```         Extract a table from a page
+
