@@ -30,3 +30,5 @@ PyMuPDF must be installed
 
 ```table.py```         Extract a table from a page
 
+```bgcolor.py``` & ```bgcolor-all.py```       Edit background color
+
