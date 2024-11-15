@@ -4,6 +4,8 @@ PyMuPDF command-line scripts
 
 PyMuPDF must be installed
 
+```help.py```          List all scripts
+
 ```pixmap.py```        Saves page as png image
 
 ```insert-image.py```  Inserts image in a page
