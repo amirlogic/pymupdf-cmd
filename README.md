@@ -34,3 +34,5 @@ PyMuPDF must be installed
 
 ```bgcolor.py``` & ```bgcolor-all.py```       Edit background color
 
+```getimages.py``` & ```getimages-all.py```   Extract images
+
