@@ -39,3 +39,5 @@ PyMuPDF must be installed
 ```xref-images.py```     Generates an HTML file containing the extracted images (from xref table)
 
 ```replace-image.py```   Replaces an image in a document (requires xref)
+
+```remove-image.py```   Removes an image in a document (requires xref)
