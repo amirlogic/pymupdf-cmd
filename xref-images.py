@@ -29,7 +29,7 @@ for xref in range(1, lenXREF):
 
         html_content += '<div style="padding:10px;">Image xref='+str(xref)+' ext: '+ imgdata['ext'] +' width: '+ str(imgdata['width']) +' height: '+ str(imgdata['height'])
 
-        html_content += '<img src="data:image/png;base64,' + base64_string + '" alt="xref' + str(xref) + '" />'        # imgbytes.getvalue()
+        html_content += '<img src="data:image/' + imgdata['ext'] + ';base64,' + base64_string + '" alt="xref' + str(xref) + '" />'        # imgbytes.getvalue()
 
         html_content += '</div>'
         
