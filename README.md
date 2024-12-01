@@ -36,3 +36,5 @@ PyMuPDF must be installed
 
 ```getimages.py``` & ```getimages-all.py```   Extract images
 
+```xref-images.py```   Generates an HTML file containing the extracted images (from xref table)
+
