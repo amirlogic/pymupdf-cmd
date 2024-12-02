@@ -6,8 +6,6 @@ PyMuPDF must be installed
 
 ```help.py```            List all scripts
 
-```pixmap.py```          Saves page as png image
-
 ```insert-image.py```    Inserts image in a page
 
 ```start.py```           Creates a one page pdf and inserts text in it
@@ -28,6 +26,10 @@ PyMuPDF must be installed
 ```split.py```           Split a pdf document
 
 
+## Exporting
+
+```pixmap.py```          Saves page as png image
+
 ```get-svg.py```         Export page to SVG
 
 ```html.py```            Export page to HTML
@@ -41,12 +43,13 @@ PyMuPDF must be installed
 
 ## Images
 
-| Group | Topics |
-|----------------------------------------------|------------------|
-| ```getimages.py``` & ```getimages-all.py``` |  Extract images  |
-| ```xref-images.py```   |  Generates an HTML file containing the extracted images (from xref table) |
-| ```replace-image.py``` |  Replaces an image in a document (requires xref) |
-| ```remove-image.py```  |  Removes an image in a document (requires xref) |
+```getimages.py``` & ```getimages-all.py```   Extract images
+
+```xref-images.py```     Generates an HTML file containing the extracted images (from xref table)
+
+```replace-image.py```   Replaces an image in a document (requires xref)
+
+```remove-image.py```    Removes an image in a document (requires xref)
 
 
 
