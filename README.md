@@ -12,6 +12,10 @@ PyMuPDF must be installed
 
 ```data.py```            Gets infos from a pdf file: Metadata, page count, images, tables and links 
 
+```search.py```          Find a word in a document
+
+```table.py```           Extract a table from a page
+
 
 ## Working with pages
 
@@ -33,12 +37,6 @@ PyMuPDF must be installed
 ```get-svg.py```         Export page to SVG
 
 ```html.py```            Export page to HTML
-
-
-
-```search.py```          Find a word in a document
-
-```table.py```           Extract a table from a page
 
 
 ## Images
