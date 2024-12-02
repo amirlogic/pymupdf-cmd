@@ -34,16 +34,16 @@ PyMuPDF must be installed
 
 ```html.py```            Export page to HTML
 
+
+
 ```search.py```          Find a word in a document
 
 ```table.py```           Extract a table from a page
 
-```bgcolor.py``` & ```bgcolor-all.py```       Edit background color
-
 
 ## Images
 
-```getimages.py``` & ```getimages-all.py```   Extract images
+```getimages.py``` & ```getimages-all.py```   Extract images to files
 
 ```xref-images.py```     Generates an HTML file containing the extracted images (from xref table)
 
@@ -52,5 +52,7 @@ PyMuPDF must be installed
 ```remove-image.py```    Removes an image in a document (requires xref)
 
 
+## Alter
 
+```bgcolor.py``` & ```bgcolor-all.py```       Edit background color
 
