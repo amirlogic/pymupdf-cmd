@@ -19,12 +19,12 @@ ry1 = int(input("Rect y1: "))
 
 newfile = input("New file: ")
 
-page.insert_htmlbox(pymupdf.Rect(rx0,ry0,rx1,ry1), textcontent)
+res = page.insert_htmlbox(pymupdf.Rect(rx0,ry0,rx1,ry1), textcontent)
 
 doc.save(newfile)
 
 
-print("Text inserted")
+print("Text inserted",res)
 
 doc.close()
 
