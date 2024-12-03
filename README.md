@@ -8,7 +8,7 @@ PyMuPDF must be installed
 
 ```insert-image.py```    Inserts image in a page
 
-```start.py```           Creates a one page pdf and inserts text in it
+```start.py```           Creates an empty pdf document with one or more pages
 
 ```data.py```            Gets infos from a pdf file: Metadata, page count, images, tables and links 
 
