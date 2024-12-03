@@ -10,6 +10,11 @@ pgnum = int(input("Page: "))
 
 page = doc[pgnum]
 
+rx0 = int(input("Rect x0: "))
+ry0 = int(input("Rect y0: "))
+rx1 = int(input("Rect x1: "))
+ry1 = int(input("Rect y1: "))
+
 print("0: LINK_NONE")
 print("1: LINK_GOTO")
 print("2: LINK_URI")
@@ -28,18 +33,22 @@ elif(kind == 1):
 elif(kind == 2):
     print("Internet uri")
     uri = input("URI: ")
-    linkdict = {"kind":kind,"uri":uri}
+    linkdict = {"kind":kind,"uri":uri, "from":pymupdf.Rect(rx0,ry0,rx1,ry1)}
 
+elif(kind == 3):
+    print("not supported")
 
+elif(kind == 4):
+    print("not supported")
+
+elif(kind == 5):
+    print("not supported")
+
+newfile = input("New file: ")
 
 page.insert_link(linkdict)
-    
-""" if(len(links)>0):
-        print("page",page.number,"\n")
-        pprint.pp(page.get_links())
-        lnkcount += 1
-        print("\n") """
 
+doc.save(newfile)
 
 
 print("Link inserted")
