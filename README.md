@@ -12,8 +12,6 @@ PyMuPDF must be installed
 
 ```data.py```            Gets infos from a pdf file: Metadata, page count, images, tables and links 
 
-```search.py```          Find a word in a document
-
 ```table.py```           Extract a table from a page
 
 
@@ -39,6 +37,13 @@ PyMuPDF must be installed
 ```html.py```            Export page to HTML
 
 
+## Text
+
+```search.py```          Find a word in a document
+
+```htmlbox.py```         Insert text (supports HTML syntax)
+
+
 ## Images
 
 ```getimages.py``` & ```getimages-all.py```   Extract images to files
@@ -48,6 +53,11 @@ PyMuPDF must be installed
 ```replace-image.py```   Replaces an image in a document (requires xref)
 
 ```remove-image.py```    Removes an image in a document (requires xref)
+
+
+## Links
+
+```get-links.py```       Extract links from a document
 
 
 ## Alter
