@@ -43,6 +43,8 @@ PyMuPDF must be installed
 
 ```htmlbox.py```         Insert text (supports HTML syntax)
 
+```file-htmlbox.py```    Insert text from text or HTML file (supports HTML syntax, uses page.rect)
+
 
 ## Images
 
