@@ -6,6 +6,8 @@ filename = input("PDF Filename: ")
 
 src = input("Source file: ")
 
+css = input("CSS file: ")
+
 doc = pymupdf.open(filename) 
 
 pgnum = int(input("Page: "))
@@ -16,7 +18,9 @@ newfile = input("New file: ")
 
 with open(src,'r') as srcfile:
 
-    res = page.insert_htmlbox(page.rect, srcfile.read())
+    cssfile = open(css,"r")
+
+    res = page.insert_htmlbox(page.rect, srcfile.read(), css=cssfile.read())
 
     doc.save(newfile)
 
