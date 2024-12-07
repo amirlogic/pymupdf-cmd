@@ -16,6 +16,8 @@ hdata = [
 
     [ "search.py", "Find a word in a document" ],
 
+    [ "add-blank-page.py", "Insert empty page" ],
+
     [ "bgcolor.py", "Edit background color for one page" ],
 
     [ "bgcolor-all.py", "Edit background color for all pages" ],
