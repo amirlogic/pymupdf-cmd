@@ -27,6 +27,8 @@ PyMuPDF must be installed
 
 ```split.py```           Split a pdf document
 
+```add-blank-page.py```  Insert empty page
+
 
 ## Exporting
 
@@ -44,6 +46,10 @@ PyMuPDF must be installed
 ```htmlbox.py```         Insert text (supports HTML syntax)
 
 ```file-htmlbox.py```    Insert text from text or HTML file (supports HTML syntax, uses page.rect)
+
+```file-htmlbox.py```    Insert text from text or HTML file (supports HTML syntax, uses page.rect)
+
+```file-css-htmlbox.py```  Insert text from file (supports external CSS2 stylesheet)
 
 
 ## Images
