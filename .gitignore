@@ -170,5 +170,5 @@ cython_debug/
 *.html
 *.svg
 
-# Dev
-dev.py
+# Session
+session.csv
