@@ -1,13 +1,16 @@
+
 import pymupdf
 
+import session
+
+import datetime
+
+
+print("Text Search")
 
 filename = input("Filename: ")
 
 needle = input("Search for: ")
-
-#mvto = input("Move to: ")
-#pgnum = int(pgnum)
-#mvto = int(mvto)
 
 doc = pymupdf.open(filename)
 
@@ -15,16 +18,19 @@ total = 0
 
 for index, page in enumerate(doc):
 
-    txtpg = page.get_textpage()
-    print("page #",index," ",len(txtpg.search(needle))," match found")
+    #txtpg = page.get_textpage()
+    #res = txtpg.search(needle)
+
+    res = page.search_for(needle)
+    
+    print("page #",index," ",len(res)," match found")
+    for found in res:
+        print(res)
 
 
 
-#doc.move_page(pgnum, mvto)
-#doc.save(f"mv-{pgnum}-{mvto}{filename}")
+session.add([datetime.datetime.now(),'search_text',filename,needle,total])
 
 doc.close()
 
 print("Task complete")
-
-#doc.save("doc-with-new-blank-page.pdf")
