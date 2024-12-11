@@ -67,8 +67,16 @@ PyMuPDF must be installed
 
 ```get-links.py```       Extract links from a document
 
+```text-link.py```       Turn text into link in a document
+
+```insert-link.py```     Inserts a link in a document (requires a Rect object)
+
 
 ## Alter
 
 ```bgcolor.py``` & ```bgcolor-all.py```       Edit background color
 
+
+## RAG-LLM
+
+```llama.py```       Requires llama-index module
