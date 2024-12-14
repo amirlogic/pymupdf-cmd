@@ -65,7 +65,7 @@ if(total > 0):
 
     doc.save(newfile)
 
-    session.add([datetime.datetime.now(),'text_to_link',filename,needle,total])
+    session.add([datetime.datetime.now(),'text_to_link',filename,needle,total,newfile])
 
 doc.close()
 
