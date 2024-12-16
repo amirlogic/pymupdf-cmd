@@ -1,35 +1,56 @@
 import pymupdf
 
-print("Please input the target file: ")
 
-filename = input("Filename: ")
-pgnum = input("Page: ")
+def exportPage(doc,pgno):
 
-pgnum = int(pgnum)
+    page = doc[pgno]
 
-doc = pymupdf.open(filename) # some new or existing PDF document
+    pix = page.get_pixmap(dpi=150)
 
-#print("Metadata: ", doc.metadata)
-#print("Pages: ", doc.page_count)
-#print("Links: ", doc.page_count)
-#print("Analyzing pages...")
-#print(type(doc[0]))
+    exported = input("Exported image (add .png):")
 
-page = doc[pgnum]
+    pix.save(exported)   # "page-%i.png" % page.number
 
-pix = page.get_pixmap()
+    print("pixmap saved")
 
-pix.save("page-%i.png" % page.number)
+    morepages = input("Do more pages? (y/n) ")
 
-print("pixmap saved")
+    if(morepages == "y" or morepages == "Y"):
+        return True
+    else:
+        return False
 
-""" for index,page in enumerate(doc):
-    #print(index,page.search_for("for"))
-    lnks = page.get_links()
-    print(index,"Links: ", len(lnks))
-    if(len(lnks)>0):
-        print(lnks)
 
-    #print("Fonts:",page.get_fonts()) """
+def enterPage(doc):
 
-doc.close()
+    pgnum = input("Page: ")
+
+    pgnum = int(pgnum)
+
+    res = exportPage(doc,pgnum)
+
+    if(res == True):
+        enterPage()
+
+
+def enterDocument():
+
+    print("Please input the target file: ")
+
+    filename = input("Filename: ")
+
+    doc = pymupdf.open(filename) 
+
+    enterPage(doc)
+
+    doc.close()
+
+    moredocs = input("Do more documents? (y/n) ")
+
+    if(moredocs == "y" or moredocs == "Y"):
+        enterDocument()
+    else:
+        print("Task completed")
+
+
+enterDocument()
