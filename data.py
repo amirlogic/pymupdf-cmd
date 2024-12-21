@@ -19,6 +19,8 @@ for index,page in enumerate(doc):
 
     print("pg#",index,": ")
     
+    print("Rect x1,y1:",page.rect.x1,",",page.rect.y1)
+
     if(len(tbls.tables)>0):
         print("This page contains tables")
         for t in tbls.tables:
