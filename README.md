@@ -14,6 +14,8 @@ PyMuPDF must be installed
 
 ```table.py```           Extract a table from a page
 
+```to-pdf.py```          Convert to PDF
+
 
 ## Working with pages
 
