@@ -2,29 +2,38 @@ import pymupdf
 
 filename = input("Filename: ")
 
-#pgnum = input("Page: ")
-#pgnum = int(pgnum)
+pgnum = int(input("Page: "))
 
-doc = pymupdf.open() # some new or existing PDF document
+img = open(input("Image file: "), "rb").read()
 
-rect = pymupdf.Rect(0, 0, 100, 100) 
+doc = pymupdf.open(filename)
 
-img = open(filename, "rb").read()
+page = doc[pgnum]
+
+def getRect():
+
+    opt = input("Whole page?")
+
+    if(opt == "y" or opt == "Y"):
+        return page.rect
+    
+    else:
+        rstr = input("Rect (x0,y0,x1,y1): ")
+        spr = rstr.split(',')
+        return pymupdf.Rect(int(spr[0]), int(spr[1]), int(spr[2]), int(spr[3])) 
+
 
 img_xref = 0 
 
-page = doc.insert_page(-1) #doc[pgnum]
+img_xref = page.insert_image(getRect(), stream=img, xref=img_xref )
 
-pg = doc[0]
+exported = input("Exported file: ")
 
-img_xref = pg.insert_image(rect, stream=img, xref=img_xref )
-
-print("Image inserted: ", filename)
-
-
-doc.save("doc-with-inserted-image.pdf")
+doc.save(exported)
 
 doc.close()
+
+print("Image inserted: ", filename)
 
 
 
