@@ -1,18 +1,27 @@
 import pymupdf
 
+import pprint
+
+print("Get an overview of a PDF file")
+
 filename = input("Filename: ")
 
-doc = pymupdf.open(filename) # some new or existing PDF document
+doc = pymupdf.open(filename)
 
-print("Metadata: ", doc.metadata)
+print("\n","Metadata: ")
 
-print("Pages: ", doc.page_count)
+pprint.pp(doc.metadata)
 
-print("Analyzing pages...")
+print("\n")
+
+print("Pages: ", doc.page_count,"\n")
+
+print("Analyzing pages...","\n")
 
 imgCount = 0
 
 for index,page in enumerate(doc):
+
     tbls = page.find_tables()
     imgs = page.get_images()
     lnks = page.get_links()
@@ -34,19 +43,9 @@ for index,page in enumerate(doc):
         print("This page contains links")
         print(lnks)
 
-#print("Total images count: ",imgCount)
+    print("\n")
 
 doc.close()
 
 print("Done")
 
-""" page = doc.insert_page(-1, # insertion point: end of document
-                        text = "The quick brown fox jumped over the lazy dog",
-                        fontsize = 11,
-                        width = 595, # page dimension: A4 portrait
-                        height = 842,
-                        fontname = "Helvetica", # default font
-                        fontfile = None, # any font file name
-                        color = (0, 0, 0)) """
-
-#doc.save("doc-with-new-blank-page.pdf")
