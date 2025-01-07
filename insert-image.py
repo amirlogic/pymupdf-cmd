@@ -1,10 +1,14 @@
 import pymupdf
 
+import pathlib
+
 filename = input("Filename: ")
 
 pgnum = int(input("Page: "))
 
-img = open(input("Image file: "), "rb").read()
+#img = open(input("Image file: "), "rb").read()
+
+img = pathlib.Path(input("Image file: ")).read_bytes()
 
 doc = pymupdf.open(filename)
 
@@ -12,7 +16,7 @@ page = doc[pgnum]
 
 def getRect():
 
-    opt = input("Whole page?")
+    opt = input("Whole page? (y/n) ")
 
     if(opt == "y" or opt == "Y"):
         return page.rect
