@@ -1,25 +1,29 @@
 import pymupdf
-from io import BytesIO
 
-doc = pymupdf.open() # some new or existing PDF document
+import pathlib
 
-page = doc.insert_page(-1, # insertion point: end of document
-                        text = "The quick brown fox jumped over the lazy dog",
-                        fontsize = 11,
-                        width = 595, # page dimension: A4 portrait
-                        height = 842,
-                        fontname = "Helvetica", # default font
-                        fontfile = None, # any font file name
-                        color = (0, 0, 0))
+print("Embed a file")
 
-pdf_bytes = BytesIO()
+filename = input("PDF Filename: ")
 
-doc.save(pdf_bytes)
+#embed = input("Embed: ")
 
-pdf_bytes.seek(0)
+doc = pymupdf.open(filename)
+
+embpath = input("Embedded filename: ")
+
+embytes = pathlib.Path(embpath).read_bytes()
+
+#embedded_doc = pymupdf.open("Video-Game-Revenue.jpg")
+#embedded_data = embedded_doc.tobytes()
+# embed with the file name and the data
+
+embfname = input("Emb filename: ")
+
+doc.embfile_add(embfname, embytes) 
+
+exported = input("New filename: ")
+
+doc.save(exported)
 
 doc.close()
-
-print(pdf_bytes.getvalue())
-
-#doc.save("doc-with-new-blank-page.pdf")
