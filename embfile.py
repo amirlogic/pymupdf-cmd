@@ -6,21 +6,15 @@ print("Embed a file")
 
 filename = input("PDF Filename: ")
 
-#embed = input("Embed: ")
-
 doc = pymupdf.open(filename)
 
 embpath = input("Embedded filename: ")
 
 embytes = pathlib.Path(embpath).read_bytes()
 
-#embedded_doc = pymupdf.open("Video-Game-Revenue.jpg")
-#embedded_data = embedded_doc.tobytes()
-# embed with the file name and the data
+embname = input("Entry identifier: ")
 
-embfname = input("Emb filename: ")
-
-doc.embfile_add(embfname, embytes) 
+doc.embfile_add(embname, embytes) 
 
 exported = input("New filename: ")
 
