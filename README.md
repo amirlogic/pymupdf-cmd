@@ -82,3 +82,11 @@ PyMuPDF must be installed
 ## RAG-LLM
 
 ```llama.py```       Requires llama-index module
+
+
+## Embed and Attach
+
+```embed.py```       Embedding one file
+
+```embed-multi.py```       Embedding multiple files
+
