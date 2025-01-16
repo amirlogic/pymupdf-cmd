@@ -2,7 +2,7 @@ import pymupdf
 
 import pathlib
 
-print("Embed multile files")
+print("Embed multiple files")
 
 filename = input("PDF Filename: ")
 
