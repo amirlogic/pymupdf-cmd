@@ -53,6 +53,8 @@ PyMuPDF must be installed
 
 ```file-css-htmlbox.py```  Insert text from file (supports external CSS2 stylesheet)
 
+```del-text.py```    Remove text
+
 
 ## Images
 
