@@ -1,5 +1,7 @@
 import pymupdf
 
+import pprint
+
 print("Get document fonts")
 
 filename = input("Filename: ")
@@ -12,6 +14,6 @@ pgno = int(input("Page: "))
 
 #page = doc[p]
 
-print(doc.get_page_fonts(pgno))
+pprint.pp(doc.get_page_fonts(pgno))
 
 print("Task complete")

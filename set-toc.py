@@ -18,7 +18,7 @@ def tocItem():
 
     print("Insert TOC item:")
 
-    lvl = int(input('Level: '))
+    lvl = int(input('Level (starts at 1): '))
 
     title = input("Title: ")
 
