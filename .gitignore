@@ -175,4 +175,4 @@ cython_debug/
 session.csv
 
 # dev
-dev*.py
+dev[0-9].py
