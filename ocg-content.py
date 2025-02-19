@@ -7,6 +7,28 @@ filename = input("Filename: ")
 
 doc = pymupdf.open(filename)
 
+def new_ocg():
+
+    ocgname = input("OCG Name: ")
+
+    activate = input("Activate? (y/n): ")
+
+    ocgon = True if activate in ("y","Y") else False
+
+    ocg_xref = doc.add_ocg(ocgname,on=ocgon)
+
+    print("OCG Added xref:",ocg_xref)
+
+    more = input("Add more? (y/n): ")
+
+    if(more in ("y","Y")):
+        new_ocg()
+
+nwocg = input("Add New OCG xref? (y/n): ").lower()
+
+if nwocg == "y":
+    new_ocg()
+
 def insert_ocg():
 
     ocg_xref = int(input("OCG xref: "))
@@ -24,7 +46,7 @@ def insert_ocg():
 
         pos = input("Point x,y: ")
 
-        pt = pymupdf.Point(pos.split(','))    # pos.split(',')[0],pos.split(',')[1]
+        pt = pymupdf.Point(pos.split(',')) 
 
         txt = input("Text to insert: ")
 
