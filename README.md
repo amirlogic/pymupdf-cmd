@@ -16,6 +16,9 @@ PyMuPDF must be installed
 
 ```to-pdf.py```          Convert to PDF
 
+```translate.py```       Translate PDF (requires deep_translator)
+
+
 
 ## Working with pages
 
@@ -92,3 +95,9 @@ PyMuPDF must be installed
 
 ```embed-multi.py```       Embedding multiple files
 
+
+## OCG (Optional Content Group)
+
+```add_ocg.py```       Add OCG
+
+```get_ocg.py```       Get OCG data
