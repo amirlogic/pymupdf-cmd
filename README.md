@@ -69,6 +69,8 @@ PyMuPDF must be installed
 
 ```remove-image.py```    Removes an image in a document (requires xref)
 
+```img-dir-pdf.py```    Make PDF file with all images in a directory
+
 
 ## Links
 
