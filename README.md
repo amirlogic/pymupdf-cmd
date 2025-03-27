@@ -18,6 +18,9 @@ PyMuPDF must be installed
 
 ```translate.py```       Translate PDF (requires deep_translator)
 
+```get-annots.py```      Extract annotations
+
+
 
 
 ## Working with pages
