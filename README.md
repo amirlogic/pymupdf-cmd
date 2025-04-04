@@ -100,6 +100,8 @@ PyMuPDF must be installed
 
 ```embed-multi.py```       Embedding multiple files
 
+```embed-walk.py```       Embedding multiple files, one by one
+
 
 ## OCG (Optional Content Group)
 
