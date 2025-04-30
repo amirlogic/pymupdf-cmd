@@ -20,6 +20,7 @@ PyMuPDF must be installed
 
 ```get-annots.py```      Extract annotations
 
+```scrub.py```           Remove potentially sensitive data from the PDF. 
 
 
 
