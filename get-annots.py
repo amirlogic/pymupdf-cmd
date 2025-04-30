@@ -34,6 +34,20 @@ for page in doc:
 
             print("File Attach.")
             pprint.pp(annot.file_info)
+
+            extract = input("Extract file? (y/n): ")
+
+            if(extract == 'y' or extract == 'Y'):
+
+                import pathlib
+
+                filebytes = annot.get_file()
+
+                xpath = pathlib.Path(input("Extract to: ")) / annot.file_info['filename']
+
+                xpath.write_bytes(filebytes)
+
+                print("File extracted")
         
         else:
             print("type: ",annot.type)
