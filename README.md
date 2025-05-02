@@ -20,8 +20,6 @@ PyMuPDF must be installed
 
 ```get-annots.py```      Extract annotations
 
-```scrub.py```           Remove potentially sensitive data from the PDF. 
-
 
 
 ## Working with pages
@@ -88,6 +86,8 @@ PyMuPDF must be installed
 ## Alter
 
 ```bgcolor.py``` & ```bgcolor-all.py```       Edit background color
+
+```scrub.py```           Remove potentially sensitive data from the PDF. 
 
 
 ## RAG-LLM
