@@ -22,7 +22,6 @@ PyMuPDF must be installed
 
 
 
-
 ## Working with pages
 
 ```delete.py```          Delete page from pdf file 
@@ -87,6 +86,10 @@ PyMuPDF must be installed
 ## Alter
 
 ```bgcolor.py``` & ```bgcolor-all.py```       Edit background color
+
+```scrub.py```           Remove potentially sensitive data from the PDF. 
+
+```encrypt.py```         Encrypt and set password for a PDF. 
 
 
 ## RAG-LLM
