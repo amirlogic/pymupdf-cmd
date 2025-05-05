@@ -89,6 +89,8 @@ PyMuPDF must be installed
 
 ```scrub.py```           Remove potentially sensitive data from the PDF. 
 
+```encrypt.py```         Encrypt and set password for a PDF. 
+
 
 ## RAG-LLM
 
