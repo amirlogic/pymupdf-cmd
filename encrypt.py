@@ -25,3 +25,5 @@ doc.save(output_pdf_path,
  encryption=encr_method,  # set the encryption method
  permissions=perm,  # set the user permissions
 )
+
+doc.close()
