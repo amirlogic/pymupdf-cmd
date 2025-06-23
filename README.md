@@ -38,6 +38,8 @@ PyMuPDF must be installed
 
 ```trim-page.py```       Remove Header and Footer
 
+```diaportrait.py```     Landscape to Portrait (2 per page)
+
 
 ## Exporting
 
