@@ -36,6 +36,8 @@ PyMuPDF must be installed
 
 ```add-blank-page.py```  Insert empty page
 
+```trim-page.py```       Remove Header and Footer
+
 
 ## Exporting
 
