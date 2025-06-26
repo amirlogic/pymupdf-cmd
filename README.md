@@ -121,6 +121,10 @@ PyMuPDF must be installed
 
 ## Forms (Widgets)
 
-```form-data.py```   Get form data
+```form-data.py```   Get Form Data
+
+```fill-form.py```   Fill a Form
+
+```build-form.py```  Build a Form
 
 
