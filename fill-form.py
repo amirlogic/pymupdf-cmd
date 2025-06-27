@@ -20,9 +20,9 @@ for page_num in range(len(doc)):
 
     # Iterate through each widget and extract data
     for widget in widgets:
-        field_name = widget.field_name  # Name of the form field
-        field_value = widget.field_value  # Value entered in the field
-        field_type = widget.field_type_string  # Type of the field (e.g., Text, CheckBox)
+        field_name = widget.field_name  
+        field_value = widget.field_value  
+        field_type = widget.field_type_string  
         
         print(f"  Field Name: {field_name}")
         print(f"  Field Value: {field_value}")
@@ -46,6 +46,14 @@ for page_num in range(len(doc)):
 
             print("\n")
 
+            field_input = int(input(f"New value: (0-{len(widget.choice_values)-1}) "))
+
+            widget.field_value = widget.choice_values[field_input]
+
+            widget.update()
+
+            print("New field value: ",widget.field_value)
+
 
         elif(field_type == "CheckBox"):
 
@@ -60,10 +68,24 @@ for page_num in range(len(doc)):
             widget.update()
 
 
+flq = input("Flatten form? (y/n): ")
+
+if(flq.strip().lower() == "y"):
+
+    print("Flattening...")
+
+    for page_num in range(len(doc)):
+
+        page = doc[page_num]
+        widgets = page.widgets()
+
+        for widget in widgets:
+            widget.fill()
+            page.delete_widget(widget) 
 
 exported = input("Exported file: ")
 
-doc.save(exported,deflate=True,garbage=3)
+doc.save(exported,deflate=True,incremental=False,clean=True)
 
 doc.close()
 

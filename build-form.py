@@ -14,6 +14,8 @@ more = True
 
 next_y0 = 80
 
+field_x0 = 150
+
 wnum = 0
 
 while(more):
@@ -32,11 +34,14 @@ while(more):
 
     widget.field_type = int(wtype)
 
-   
+    wtxt = input("Field text: ")
+
+    page.insert_text(pymupdf.Point(50,next_y0+60),wtxt)
+
     # Text
     if(wtype == "7"):
 
-        widget.rect = pymupdf.Rect(50,next_y0+50,300,next_y0+65)
+        widget.rect = pymupdf.Rect(field_x0,next_y0+50,300,next_y0+65)
 
         widget.field_name = f"textfield-{wnum}"
 
@@ -44,23 +49,31 @@ while(more):
     # Radio
     elif(wtype == "5"):
 
-        widget.rect = pymupdf.Rect(50,next_y0+50,100,next_y0+65)
+        #widget.field_type = 1
+
+        widget.rect = pymupdf.Rect(field_x0,next_y0+50,field_x0+15,next_y0+65)
 
         widget.field_name = f"radiofield-{wnum}"
         
 
 
-        widget.field_value = "test"
+        #widget.field_value = "test"
 
-        widget.field_flags = 15
+        #widget.text_font = "ZaDb"
+
+        #widget.text_fontsize = 0
+
+        widget.field_flags = pymupdf.PDF_BTN_FIELD_IS_RADIO
 
 
     # Button
     elif(wtype == "1"):
 
-        widget.rect = pymupdf.Rect(50,next_y0+50,150,next_y0+65)
+        widget.rect = pymupdf.Rect(field_x0,next_y0+50,field_x0+100,next_y0+65)
 
         widget.field_name = f"button-{wnum}"
+
+        widget.border_color = pymupdf.pdfcolor['blue']
 
         widget.text_fontsize = 12
 
@@ -81,7 +94,7 @@ while(more):
 
         widget.choice_values = options
 
-        widget.rect = pymupdf.Rect(50,next_y0+50,300,next_y0+450)
+        widget.rect = pymupdf.Rect(field_x0,next_y0+50,300,next_y0+100)
 
 
 
@@ -93,7 +106,7 @@ while(more):
     # CheckBox
     elif(wtype == "2"):
 
-        widget.rect = pymupdf.Rect(50,next_y0+50,60,next_y0+60)
+        widget.rect = pymupdf.Rect(field_x0,next_y0+50,field_x0+10,next_y0+60)
 
         widget.field_name = f"checkbox-{wnum}"
 
@@ -102,8 +115,14 @@ while(more):
         widget.text_fontsize = 0
 
 
+    try:
+        annot = page.add_widget(widget)
 
-    annot = page.add_widget(widget)
+    except ValueError:
+        print("ERROR: Could not add widget (page.add_widget(): Bad xref)")
+
+    except:
+        print("ERROR: Could not add widget")
 
     wnum += 1
 
