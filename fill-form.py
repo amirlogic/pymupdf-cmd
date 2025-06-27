@@ -68,7 +68,7 @@ for page_num in range(len(doc)):
             widget.update()
 
 
-flq = input("Flatten form? (y/n): ")
+flq = "n" #input("Flatten form? (y/n): ")
 
 if(flq.strip().lower() == "y"):
 
