@@ -79,6 +79,8 @@ while(more):
 
         widget.button_caption = "Test"
 
+        widget.script = 'app.alert("Hello From PDF!")'
+
 
     # ListBox
     elif(wtype == "4"):
@@ -117,6 +119,7 @@ while(more):
 
     try:
         annot = page.add_widget(widget)
+        print("xref:",widget.xref)
 
     except ValueError:
         print("ERROR: Could not add widget (page.add_widget(): Bad xref)")
