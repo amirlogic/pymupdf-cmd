@@ -68,20 +68,15 @@ for page_num in range(len(doc)):
             widget.update()
 
 
-flq = "n" #input("Flatten form? (y/n): ")
+flq = input("Flatten form? (y/n): ")
 
 if(flq.strip().lower() == "y"):
 
     print("Flattening...")
 
-    for page_num in range(len(doc)):
+    doc.bake()
 
-        page = doc[page_num]
-        widgets = page.widgets()
-
-        for widget in widgets:
-            widget.fill()
-            page.delete_widget(widget) 
+    
 
 exported = input("Exported file: ")
 
