@@ -1,15 +1,13 @@
 
+def main():
 
-
-if __name__ == "__main__":
-
-    print("PyMuPDF Command Line App")
+    print("\nPyMuPDF Command Line App")
 
     print("\n\n","Pages","\n")
 
-    print("\tmerge")
+    print("\tmerge - split")
 
-    print("\tmove")
+    print("\tmove - delete - fcopy")
 
     print("\n\n","Embed files","\n")
 
@@ -21,9 +19,16 @@ if __name__ == "__main__":
 
     print("\n\n","Images","\n")
 
-    print("\tpixmap")
+    print("\tpixmap - getimages")
 
-    goto = input("Function#: ")
+    print("\n\n","Security","\n")
+
+    print("\tencrypt - decrypt")
+
+
+    goto = input("\nFunction: ")
+
+    print("\n")
 
     if(goto == "htmlbox"):
 
@@ -44,3 +49,43 @@ if __name__ == "__main__":
     elif(goto == "search"):
 
         import search
+
+    elif(goto == "delete"):
+
+        import delete
+
+    elif(goto == "fcopy"):
+
+        import fcopy
+
+    elif(goto == "encrypt"):
+
+        import encrypt
+
+    elif(goto == "decrypt"):
+
+        import decrypt
+
+    elif(goto == "getimages"):
+
+        import getimages
+
+    elif(goto == "split"):
+
+        import split
+
+
+    more = input("Continue? (y/n): ")
+
+    if(more.strip().lower() == "y"):
+
+        main()
+
+    else:
+
+        print("Exiting...")
+
+
+if __name__ == "__main__":
+
+    main()
