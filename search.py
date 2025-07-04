@@ -10,26 +10,36 @@ print("Text Search")
 
 filename = input("Filename: ")
 
-needle = input("Search for: ")
-
 doc = pymupdf.open(filename)
 
-total = 0
+def findIt():
 
-for index, page in enumerate(doc):
+    needle = input("Search for: ")
 
-    #txtpg = page.get_textpage()
-    #res = txtpg.search(needle)
+    total = 0
 
-    res = page.search_for(needle)
-    
-    print("page #",index," ",len(res)," match found")
-    for found in res:
-        print(res)
+    for index, page in enumerate(doc):
+
+        res = page.search_for(needle)
+        
+        print("page #",index," ",len(res)," match found")
+
+        for found in res:
+            print(res)
+            total += 1
+
+    print("\n")
+
+    more = input("Find more strings? (y/n): ")
+
+    if(more.strip().lower() == "y"):
+
+        findIt()
 
 
+findIt()
 
-session.add([datetime.datetime.now(),'search_text',filename,needle,total])
+session.add([datetime.datetime.now(),'search_text',filename])
 
 doc.close()
 
