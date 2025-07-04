@@ -2,7 +2,7 @@ import pymupdf
 
 import pathlib
 
-ftypes = ('.png','.jpg','.jpeg','.bmp','.svg')
+ftypes = ('.png','.jpg','.jpeg','.bmp','.svg','.mp4')
 
 print("Embed multiple files (Walk)")
 
