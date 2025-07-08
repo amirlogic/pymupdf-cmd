@@ -3,28 +3,21 @@ def main():
 
     print("\nPyMuPDF Command Line App")
 
-    print("\n\n","Pages","\n")
+    print("\n\n","Infos:\t\t|","\ttoc","\tdata","\ttable")
 
-    print("\tmerge - split")
+    print("\n\n","Pages:\t\t|","\tmerge","\tsplit", "\tmove", "\tdelete", "\tfcopy")
 
-    print("\tmove - delete - fcopy")
+    print("\n\n","Ext. files:\t|","\tattach")
 
-    print("\n\n","Embed files","\n")
+    print("\n\n","Text:\t\t|","\tsearch", "\thtmlbox")
 
-    print("\n\n","Text","\n")
+    print("\n\n","Images:\t|","\tpixmap", "\tgetimages")
 
-    print("\tsearch")
+    print("\n\n","Transform:\t|","\tdiaportrait", "\tbgcolor")
 
-    print("\thtmlbox")
+    print("\n\n","Security:\t|","\tencrypt", "\tdecrypt", "\tscrub")
 
-    print("\n\n","Images","\n")
-
-    print("\tpixmap - getimages")
-
-    print("\n\n","Security","\n")
-
-    print("\tencrypt - decrypt")
-
+    print("\n")
 
     goto = input("\nFunction: ")
 
@@ -73,6 +66,38 @@ def main():
     elif(goto == "split"):
 
         import split
+
+    elif(goto == "scrub"):
+
+        import scrub
+
+    elif(goto == "attach"):
+
+        import attach
+
+    elif(goto == "toc"):
+
+        import toc
+
+    elif(goto == "data"):
+
+        import data
+
+    elif(goto == "table"):
+
+        import table
+
+    elif(goto == "start"):
+
+        import start
+
+    elif(goto == "diaportrait"):
+
+        import diaportrait
+
+    elif(goto == "bgcolor"):
+
+        import bgcolor
 
 
     more = input("Continue? (y/n): ")
