@@ -26,7 +26,7 @@ jobs:
           spec: app.py
           #requirements: 'requirements.txt'
           #upload_exe_with_name: 'My executable'
-          options: --onefile, --windowed  # --name "My App",
+          options: --onefile  # --name "My App",
           #spec_options: # any custom arguments you want like: `--debug`
 
       - name: Upload Executable
