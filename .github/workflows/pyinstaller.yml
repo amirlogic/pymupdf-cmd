@@ -23,7 +23,7 @@ jobs:
         with:
           python_ver: '3.10'
           #pyinstaller_ver: '==5.13.2'
-          spec: "${{ github.event.inputs.pyfile }}"
+          spec: app.py
           #requirements: 'requirements.txt'
           #upload_exe_with_name: 'My executable'
           options: --onefile, --windowed  # --name "My App",
