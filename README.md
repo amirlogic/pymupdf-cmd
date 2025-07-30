@@ -77,6 +77,8 @@ PyMuPDF must be installed
 
 ```img-dir-pdf.py```    Make PDF file with all images in a directory
 
+```delimages.py```      Delete all images in a document
+
 
 ## Links
 
