@@ -11,7 +11,7 @@ def main():
 
     print("\n\n","Text:\t\t|","\tsearch", "\thtmlbox")
 
-    print("\n\n","Images:\t|","\tpixmap", "\tgetimages")
+    print("\n\n","Images:\t|","\tpixmap", "\tgetimages", "\tdelimages")
 
     print("\n\n","Transform:\t|","\tdiaportrait", "\tbgcolor")
 
@@ -98,6 +98,10 @@ def main():
     elif(goto == "bgcolor"):
 
         import bgcolor
+
+    elif(goto == "delimages"):
+
+        import delimages
 
 
     more = input("Continue? (y/n): ")
