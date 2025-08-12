@@ -3,7 +3,7 @@ def main():
 
     print("\nPyMuPDF Command Line App")
 
-    print("\n\n","Infos:\t\t|","\ttoc","\tdata","\ttable")
+    print("\n\n","Infos:\t\t|","\ttoc","\tdata","\ttable","\tdir")
 
     print("\n\n","Pages:\t\t|","\tmerge","\tsplit", "\tmove", "\tdelete", "\tfcopy")
 
@@ -13,7 +13,7 @@ def main():
 
     print("\n\n","Images:\t|","\tpixmap", "\tgetimages", "\tdelimages")
 
-    print("\n\n","Transform:\t|","\tdiaportrait", "\tbgcolor")
+    print("\n\n","Transform:\t|","\tdiaportrait", "\tbgcolor", "\tcompress")
 
     print("\n\n","Security:\t|","\tencrypt", "\tdecrypt", "\tscrub")
 
@@ -102,6 +102,14 @@ def main():
     elif(goto == "delimages"):
 
         import delimages
+
+    elif(goto == "compress"):
+
+        import compress
+
+    elif(goto == "dir"):
+
+        import dir
 
 
     more = input("Continue? (y/n): ")
