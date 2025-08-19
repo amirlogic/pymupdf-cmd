@@ -9,7 +9,7 @@ def main():
 
     print("\n\n","Ext. files:\t|","\tattach")
 
-    print("\n\n","Text:\t\t|","\tsearch", "\tsearchdir", "\thtmlbox")
+    print("\n\n","Text:\t\t|","\tsearch", "\tsearchdir", "\thtmlbox", "\tstamp")
 
     print("\n\n","Images:\t|","\tpixmap", "\tgetimages", "\tdelimages")
 
@@ -114,6 +114,10 @@ def main():
     elif(goto == "searchdir"):
 
         import searchdir
+
+    elif(goto == "stamp"):
+
+        import stamp
 
 
     more = input("Continue? (y/n): ")
