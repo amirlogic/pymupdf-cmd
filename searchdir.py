@@ -34,7 +34,7 @@ def findIt():
                     res = page.search_for(needle)
 
                     if(len(res) > 0):
-                        print("\tpage #",index,":",len(res),"match found")
+                        print("\tpage #",index,":",len(res),"match(es) found")
                         total += len(res)
 
 

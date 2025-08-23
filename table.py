@@ -7,7 +7,6 @@ pgnum = input("Page index: ")
 
 tblindx = input("Table index: ")
 
-#mvto = input("Move to: ")
 pgnum = int(pgnum)
 tblindx = int(tblindx)
 

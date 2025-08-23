@@ -12,6 +12,10 @@ for page in doc:
 
 exported = input("New file: ")
 
+if(exported == ""):
+
+    exported = filename[:-4]+"_grayscale.pdf"
+
 doc.ez_save(exported)
 
 doc.close()
