@@ -1,5 +1,7 @@
 import pymupdf
 
+print("Text vs OCR Needed Checker")
+
 filename = input("Filename: ")
 
 doc = pymupdf.open(filename)
