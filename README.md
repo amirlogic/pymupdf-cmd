@@ -79,6 +79,8 @@ PyMuPDF must be installed
 
 ```delimages.py```      Delete all images in a document
 
+```textvsimg.py```      Text vs OCR Needed Checker
+
 
 ## Links
 
