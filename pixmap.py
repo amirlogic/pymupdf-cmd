@@ -30,7 +30,7 @@ def enterPage(doc):
     res = exportPage(doc,pgnum)
 
     if(res == True):
-        enterPage()
+        enterPage(doc)
 
 
 def enterDocument():

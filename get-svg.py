@@ -7,20 +7,22 @@ pgnum = input("Page: ")
 
 pgnum = int(pgnum)
 
-doc = pymupdf.open(filename) # some new or existing PDF document
+doc = pymupdf.open(filename)
 
 
 page = doc[pgnum]
 
-svg = page.get_svg_image()
+txtpath = ( input("Text as path? (y/n): ") == "y" )
 
-f = open(filename[:-4]+".svg", "a")
+print("Processing...")
+
+svg = page.get_svg_image(text_as_path=txtpath)
+
+f = open(filename[:-4]+"-"+str(pgnum)+".svg", "a")
 f.write(svg)
 f.close()
 
-#pix.save("page-%i.png" % page.number)
 
 print("SVG saved")
-
 
 doc.close()

@@ -1,5 +1,7 @@
 import pymupdf
 
+import session
+
 print("Insert link")
 
 filename = input("Filename: ")
@@ -28,7 +30,9 @@ if(kind == 0):
     print("not supported")
 
 elif(kind == 1):
-    print("not supported")
+    print("GOTO")
+    dpg = int(input("Destination page: "))
+    linkdict = {"kind":kind,"page":dpg, "from":pymupdf.Rect(rx0,ry0,rx1,ry1)}
 
 elif(kind == 2):
     print("Internet uri")

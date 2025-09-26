@@ -2,16 +2,22 @@ import pymupdf
 
 print("Convert to PDF")
 
-filename = input("Filename: ")
+while(True):
 
-doc = pymupdf.open(filename)
+    filename = input("Filename: ")
 
-pdfbytes = doc.convert_to_pdf()
+    doc = pymupdf.open(filename)
 
-pdf = pymupdf.open("pdf", pdfbytes)
+    pdfbytes = doc.convert_to_pdf()
 
-exported = input("Exported file: ")
+    pdf = pymupdf.open("pdf", pdfbytes)
 
-pdf.save(exported)
+    exported = input("Exported file: ")
 
-print("Task complete")
+    pdf.save(exported)
+
+    print("Task complete")
+
+    if(input("Convert another file? (y/n): ").lower().strip() != "y"):
+
+        break

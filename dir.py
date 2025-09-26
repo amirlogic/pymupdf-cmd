@@ -5,7 +5,11 @@ import pathlib
 
 print("\nAnalyze PDF Documents in a Directory\n")
 
-wdir = input("Directory: ")
+wdir = input("Directory (defaults to CWD): ")
+
+if(wdir == ""):
+
+    wdir = pathlib.Path.cwd()
 
 wlkpath = pathlib.Path(wdir)
 
@@ -38,7 +42,8 @@ for file_path in wlkpath.iterdir():
 
                 imgcnt += len(page.get_images())
 
-                
+
+            doc.close()
 
             print("Links:",lnkcnt,"- Images:",imgcnt)
 

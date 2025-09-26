@@ -3,7 +3,7 @@ def main():
 
     print("\nPyMuPDF Command Line App")
 
-    print("\n\n","Infos:\t\t|","\ttoc","\tdata","\ttable","\tdir")
+    print("\n\n","Infos:\t\t|","\ttoc","\tdata","\ttable","\tdir","\ttextvsimg")
 
     print("\n\n","Pages:\t\t|","\tmerge","\tsplit", "\tmove", "\tdelete", "\tfcopy")
 
@@ -118,6 +118,10 @@ def main():
     elif(goto == "stamp"):
 
         import stamp
+    
+    elif(goto == "textvsimg"):
+
+        import textvsimg
 
 
     more = input("Continue? (y/n): ")
