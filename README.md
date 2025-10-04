@@ -90,6 +90,8 @@ PyMuPDF must be installed
 
 ```insert-link.py```     Inserts a link in a document (requires a Rect object)
 
+```indexlinks.py```      Inserts an Internal Link on a text index in a document
+
 
 ## Alter
 
