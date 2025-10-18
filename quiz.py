@@ -20,12 +20,12 @@ ocg_xref = doc.add_ocg("Answers",on=False)
 page.insert_text(pymupdf.Point(300,50),"Quiz",fontsize=22)
 
 
-def add_question():
+while(True):
     
-    global y_offset
-    global pgno
-    global page
-    global doc
+    #global y_offset
+    #global pgno
+    #global page
+    #global doc
 
     qtxt = input("Question text: ")
 
@@ -79,11 +79,11 @@ def add_question():
             pgno += 1
             page = doc[pgno]
 
-        add_question()
+        #add_question()
+    else:
+        break
 
-
-add_question()
-
+#add_question()
 
 
 exported = input("Exported file: ")
