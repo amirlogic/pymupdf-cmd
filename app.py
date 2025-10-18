@@ -13,7 +13,9 @@ def main():
 
     print("\n\n","Images:\t|","\tpixmap", "\tgetimages", "\tdelimages")
 
-    print("\n\n","Transform:\t|","\tdiaportrait", "\tbgcolor", "\tcompress")
+    print("\n\n","Forms:\t|","\tquiz", "\tfillform")
+
+    print("\n\n","Transform:\t|","\tdiaportrait", "\tbgcolor", "\tcompress", "\tindexlinks")
 
     print("\n\n","Security:\t|","\tencrypt", "\tdecrypt", "\tscrub")
 
@@ -122,6 +124,18 @@ def main():
     elif(goto == "textvsimg"):
 
         import textvsimg
+
+    elif(goto == "indexlinks"):
+
+        import indexlinks
+    
+    elif(goto == "quiz"):
+
+        import quiz
+
+    elif(goto == "fillform"):
+
+        import fillform
 
 
     more = input("Continue? (y/n): ")
