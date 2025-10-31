@@ -24,11 +24,11 @@ for b in gt["blocks"]:
 
                     print(span['text'],"\n")
 
-                    mklink = input("Make link (y/n): ").strip().lower() == 'y'
+                    mklink = input("\tMake link (y/n): ").strip().lower() == 'y'
 
                     if(mklink):
 
-                        topage = int(input("To page index: "))
+                        topage = int(input("\tTo page index: "))
                         print(span['bbox'])
 
                         page.insert_link({
@@ -36,11 +36,13 @@ for b in gt["blocks"]:
                             "from": pymupdf.Rect(span['bbox'][0], span['bbox'][1], span['bbox'][2], span['bbox'][3]),
                             "page": topage})
                         
-                        print("Link created to page", topage, "\n")
+                        print("\tLink created to page", topage, "\n")
+                    print("\n")
 
 output = input("Output filename: ")
 
 if(output.strip()):
+
     doc.save(output)
 
 doc.close()
