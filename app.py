@@ -17,6 +17,8 @@ def main():
 
     print("\n\n","Transform:\t|","\tdiaportrait", "\tbgcolor", "\tcompress", "\tindexlinks")
 
+    print("\n\n","Export:\t|","\thtmlpage")
+
     print("\n\n","Security:\t|","\tencrypt", "\tdecrypt", "\tscrub")
 
     print("\n")
@@ -136,6 +138,10 @@ def main():
     elif(goto == "fillform"):
 
         import fillform
+
+    elif(goto == "htmlpage"):
+
+        import htmlpage
 
 
     more = input("Continue? (y/n): ")

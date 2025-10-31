@@ -14,9 +14,9 @@ docfonts = []
 
 for page in doc:
 
-    r = page.get_text("dict")
+    t = page.get_text("dict")
 
-    for b in r['blocks']:
+    for b in t['blocks']:
 
         if(b['type'] == 0):
 
@@ -37,7 +37,7 @@ for page in doc:
 
 print("Text blocks:",txtcount)
 
-print("Image count:",imgcount)
+print("Image blocks:",imgcount)
 
 print(f"Fonts ({len(docfonts)})")
 
