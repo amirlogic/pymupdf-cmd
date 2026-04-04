@@ -24,7 +24,7 @@ if(snum == "1"):
 
     pt2 = input("Point 2 (x,y): ").split(",")
 
-    page.draw_line(pymupdf.Point(int(pt1[0]),int(pt1[1])),pymupdf.Point(int(pt2[0]),int(pt2[1])))
+    shape.draw_line(pymupdf.Point(int(pt1[0]),int(pt1[1])),pymupdf.Point(int(pt2[0]),int(pt2[1])))
 
     shape.commit()
 
@@ -37,7 +37,7 @@ elif(snum == "2"):
 
     rect = rc.split(",")
 
-    page.draw_rect(pymupdf.Rect(*rect))
+    shape.draw_rect(pymupdf.Rect(*rect))
 
     shape.commit()
 
@@ -50,7 +50,7 @@ elif(snum == "3"):
     
     radius = input("Radius: ")
 
-    page.draw_circle(pymupdf.Point(*rd))
+    shape.draw_circle(pymupdf.Point(*rd))
 
     shape.commit()
 

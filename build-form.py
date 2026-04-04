@@ -49,21 +49,19 @@ while(more):
     # Radio
     elif(wtype == "5"):
 
-        #widget.field_type = 1
-
         widget.rect = pymupdf.Rect(field_x0,next_y0+50,field_x0+15,next_y0+65)
 
         widget.field_name = f"radiofield-{wnum}"
         
-
-
-        #widget.field_value = "test"
-
-        #widget.text_font = "ZaDb"
-
-        #widget.text_fontsize = 0
-
         widget.field_flags = pymupdf.PDF_BTN_FIELD_IS_RADIO
+
+        widget.border_color = pymupdf.pdfcolor['blue']
+
+        widget.border_width = 1
+
+        widget.field_value = False
+
+        
 
 
     # Button

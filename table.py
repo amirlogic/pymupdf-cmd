@@ -1,5 +1,6 @@
 import pymupdf
 
+print("Explore Tables\n\n")
 
 filename = input("Filename: ")
 
