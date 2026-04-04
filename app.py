@@ -17,7 +17,7 @@ def main():
 
     print("\n\n","Transform:\t|","\tdiaportrait", "\tbgcolor", "\tcompress", "\tindexlinks")
 
-    print("\n\n","Export:\t|","\thtmlpage")
+    print("\n\n","Export:\t|","\thtmlpage","\taggregate")
 
     print("\n\n","Security:\t|","\tencrypt", "\tdecrypt", "\tscrub")
 
@@ -142,6 +142,10 @@ def main():
     elif(goto == "htmlpage"):
 
         import htmlpage
+
+    elif(goto == "aggregate"):
+
+        import aggregate
 
 
     more = input("Continue? (y/n): ")

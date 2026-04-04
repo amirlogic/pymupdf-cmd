@@ -17,7 +17,7 @@ for page in doc:
     if(len(links)>0):
         print("page",page.number,"\n")
         pprint.pp(page.get_links())
-        lnkcount += 1
+        lnkcount += len(links)
         print("\n")
 
 
