@@ -27,6 +27,12 @@ for page_num in range(len(doc)):
         print(f"  Field Type: {field_type}")
         print()
 
+        if(field_type == "ListBox"):
+
+            print(widget.choice_values)
+
+            
+
 
 doc.close()
 
