@@ -47,7 +47,7 @@ PyMuPDF must be installed
 
 ```pixmap.py```          Saves page as png image
 
-```get-svg.py```         Export page to SVG
+```getsvg.py```         Export page to SVG
 
 ```html.py```            Export page to HTML
 
@@ -64,7 +64,7 @@ PyMuPDF must be installed
 
 ```file-css-htmlbox.py```  Insert text from file (supports external CSS2 stylesheet)
 
-```del-text.py```    Remove text
+```deltext.py```    Remove text
 
 
 ## Images
