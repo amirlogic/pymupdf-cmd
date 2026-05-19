@@ -3,8 +3,24 @@ import pymupdf4llm
 
 from pathlib import Path
 
-def doOCR():
-    pass
+def doRapOCR(img):
+    from rapidocr import RapidOCR
+
+    engine = RapidOCR()
+
+    result, _ = engine(img)
+
+    ocr_output = []
+    for line in result:
+        box, text, conf = line
+        # Convert polygon -> bounding box
+        x_coords = [p[0] for p in box]
+        y_coords = [p[1] for p in box]
+        bbox = [min(x_coords), min(y_coords), max(x_coords), max(y_coords)]
+
+        ocr_output.append((bbox, text, conf))
+
+    return ocr_output
 
 def mdImages():
 
@@ -16,9 +32,9 @@ def main():
 
     print("\n\n","Whole file(s) to MD:\t\t|","\tfilemd","\tdirmd","\tnohdft",)
 
-    print("\n\n","To MD with Images:\t\t|","\tfilemdi",)
+    print("\n\n","To MD with Images:\t\t|","\tfilemdi","\tfilemdi64",)
 
-    #print("\n\n","OCR:\t\t|","\tfullocr",)
+    print("\n\n","Force OCR:\t\t|","\tfullocr",)
 
     print("\n\n","Table strategy:\t\t|",)
 
@@ -98,9 +114,7 @@ def main():
 
     elif(goto == "filemdi"):
 
-        #import pymupdf
-
-        print("Single File to Markdown (Images included)\n")
+        print("Single File to Markdown (Images included in folder)\n")
 
         filename = input("Filename: ")
         img_path = Path(filename).parent or Path.cwd()
@@ -114,14 +128,29 @@ def main():
             print("\n", mdi, "\n")
 
 
+    elif(goto == "filemdi64"):
+
+        print("Single File to Markdown (Images included in file as base64)\n")
+
+        filename = input("Filename: ")
+        mdi = pymupdf4llm.to_markdown(filename,show_progress=True,embed_images=True)
+
+        output_path = Path(filename).with_suffix(".md")
+        output_path.write_text(mdi, encoding="utf-8")
+        print(f"Wrote markdown to: {output_path}")
+
+
+
     elif(goto == "fullocr"):
+
+        pass
 
         print("Single File to Markdown (Force OCR)\n")
 
-        from rapidocr import RapidOCR
+        #from rapidocr import RapidOCR
 
         filename = input("Filename: ")
-        md = pymupdf4llm.to_markdown(filename,show_progress=True)    #force_ocr=True,
+        md = pymupdf4llm.to_markdown(filename,show_progress=True,ocr_function=doRapOCR,force_ocr=True)    #force_ocr=True, ,ocr_function=doRapOCR
         # ocr_function needs to be provided
 
 
