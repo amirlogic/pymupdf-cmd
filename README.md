@@ -4,7 +4,9 @@ PyMuPDF command-line scripts
 
 PyMuPDF must be installed
 
-```help.py```            List all scripts
+```app.py```             One File App
+
+```4llm.py```            One File App (4LLM)
 
 ```insert-image.py```    Inserts image in a page
 
@@ -14,7 +16,7 @@ PyMuPDF must be installed
 
 ```table.py```           Extract a table from a page
 
-```to-pdf.py```          Convert to PDF
+```topdf.py```           Convert to PDF
 
 ```translate.py```       Translate PDF (requires deep_translator)
 
