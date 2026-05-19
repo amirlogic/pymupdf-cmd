@@ -17,7 +17,7 @@ def main():
 
     print("\n\n","Transform:\t|","\tdiaportrait", "\tbgcolor", "\tcompress", "\tindexlinks", "\ttopdf")
 
-    print("\n\n","Export:\t|","\thtmlpage","\taggregate")
+    print("\n\n","Export:\t|","\thtmlpage","\taggregate","\tgetsvg")
 
     print("\n\n","Security:\t|","\tencrypt", "\tdecrypt", "\tscrub")
 
@@ -151,6 +151,22 @@ def main():
 
         import topdf
 
+    elif (goto == "getsvg"):
+
+        import getsvg
+
+    elif (goto == "getfonts"):
+
+        import getfonts
+
+    elif (goto == "getlinks"):
+
+        import getlinks
+
+    else:
+
+        print(f"\nUnknown command: {goto}\n")
+    
 
     more = input("Continue? (y/n): ")
 
