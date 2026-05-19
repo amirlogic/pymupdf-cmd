@@ -15,7 +15,7 @@ def main():
 
     print("\n\n","Forms:\t|","\tquiz", "\tfillform")
 
-    print("\n\n","Transform:\t|","\tdiaportrait", "\tbgcolor", "\tcompress", "\tindexlinks")
+    print("\n\n","Transform:\t|","\tdiaportrait", "\tbgcolor", "\tcompress", "\tindexlinks", "\ttopdf")
 
     print("\n\n","Export:\t|","\thtmlpage","\taggregate")
 
@@ -146,6 +146,10 @@ def main():
     elif(goto == "aggregate"):
 
         import aggregate
+
+    elif (goto == "topdf"):
+
+        import topdf
 
 
     more = input("Continue? (y/n): ")

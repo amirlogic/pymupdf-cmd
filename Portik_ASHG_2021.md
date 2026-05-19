@@ -1,4 +1,4 @@
-![](C:/Users/HP/Documents/DEV/SandBox/pymupdf-cmd/Portik_ASHG_2021.pdf-0-0.png)
+![](Portik_ASHG_2021.pdf-0-0.png)
 
 **Development and Optimization of a 43 Gene Pharmacogenomic Panel Using Enrichment-Based Capture and PacBio HiFi Sequencing**
 
@@ -20,7 +20,7 @@ Daniel Portik [1], Ting Hon [1], Josiah Wilcots [1], Nina Gonzaludo [1], Yao Yan
 
 
 
-![](C:/Users/HP/Documents/DEV/SandBox/pymupdf-cmd/Portik_ASHG_2021.pdf-0-1.png)
+![](Portik_ASHG_2021.pdf-0-1.png)
 
 ![](C:/Users/HP/Documents/DEV/SandBox/pymupdf-cmd/Portik_ASHG_2021.pdf-0-6.png)
 
